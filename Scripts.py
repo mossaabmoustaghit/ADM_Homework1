@@ -1,3 +1,4 @@
+#--------------------------------------------------------Exercice 1 -------------------------------------------------------
 # ---------Introduction----------- 
 # Say "Hello, World!" With Python
 if __name__ == '__main__':
@@ -994,10 +995,112 @@ print(result)
 
 # Shape and Reshape
 import numpy
-
-
 l=numpy.array(input().split(),int)
 print(l.reshape(3,3))
+
+# Transpose and Flatten
+import numpy
+N,M=map(int,input().split())
+arr=[]
+for i in range(N):
+    arr.append([int(j) for j in input().strip().split()])
+arr=numpy.array(arr)
+print(numpy.transpose(arr))
+print(arr.flatten())
+
+# Concatenate
+import numpy
+N,M,P=map(int,input().split())
+matrix1=[]
+matrix2=[]
+for i in range (N):
+    matrix1.append([int(j) for j in input().split()])
+for i in range(M):
+    matrix2.append([int(j) for j in input().split()])
+matrix1=numpy.array(matrix1)
+matrix2=numpy.array(matrix2)
+print(numpy.concatenate((matrix1,matrix2),axis=0))
+
+# Zeros and Ones
+import numpy
+N=tuple(map(int,input().split()))
+print(numpy.zeros(N, int),numpy.ones(N, int),sep='\n')
+
+# Eye and Idendity 
+import numpy
+N,M=map(int,input().split())
+A=str(numpy.eye(N,M, k = 0))
+A=A.replace('1',' 1')
+A=A.replace('0',' 0')
+print(A) 
+
+# Array Mathematics
+import numpy
+N,M=map(int,input().split())
+
+A=[]
+B=[]
+for i in range (N):
+    A.append(input().split())
+for i in range (N):
+    B.append( input().split())
+A=numpy.array(A,int)
+B=numpy.array(B,int)
+print(A+B)
+print(A-B)
+print(A*B)
+print(A//B)
+print(A%B)
+print(A**B)
+
+# Floor, Ceil and Rint
+import numpy
+A=numpy.array(input().split(' '),float)
+numpy.set_printoptions(sign=' ')
+print(numpy.floor(A))
+print(numpy.ceil(A))
+print(numpy.rint(A))
+
+# Sum and Prod
+import numpy
+N,M=map(int, input().split())
+A=[]
+for i in range (N):
+    A.append(input().split())
+A=numpy.array(A,int)
+sum = numpy.sum(A,axis=0)
+prod=numpy.prod(sum,axis=0)
+print(prod)
+
+# Min and Max
+import numpy
+N,M=map(int,input().split())
+A=[]
+for i in range(N):
+    A.append(input().split())
+A=numpy.array(A,int)
+mini=numpy.min(A,axis=1)
+print(numpy.max(mini,axis=0))
+
+# Dot and Cross
+import numpy
+N=int(input())
+A=[]
+B=[]
+for i in range(N):
+    A.append(input().split())
+for i in range(N):
+    B.append(input().split())  
+A=numpy.array(A,int)
+B=numpy.array(B,int)
+
+print(numpy.dot(A,B))
+
+# Inner And Outer
+
+
+
+
 
 
 
