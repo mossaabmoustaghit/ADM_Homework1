@@ -1,4 +1,4 @@
-#--------------------------------------------------------Exercice 1 -------------------------------------------------------
+#--------------------------------------------------------Problem 1 -------------------------------------------------------
 # ---------Introduction----------- 
 # Say "Hello, World!" With Python
 if __name__ == '__main__':
@@ -1097,6 +1097,40 @@ B=numpy.array(B,int)
 print(numpy.dot(A,B))
 
 # Inner And Outer
+import numpy
+A=numpy.array(input().split(),int)
+B=numpy.array(input().split(),int)
+print(numpy.inner(A,B))
+print(numpy.outer(A,B))
+
+# Polynomials 
+import numpy
+P=[float(i) for i in input().split()]
+x=float(input())
+print (numpy.polyval(P, x))
+
+# Linear Algebra
+import numpy
+N=int(input())
+M=[]
+for i in range(N):
+    M.append(input().split())
+M=numpy.array(M,float)
+
+print (round(numpy.linalg.det(M),2))
+
+# Mean, Var, and Std
+import numpy
+N,M=map(int,input().split())
+A=[]
+for i in range(N):
+    A.append(input().split())
+A=numpy.array(A,int)
+
+print(numpy.mean(A,axis=1))
+print(numpy.var(A,axis=0))
+print(numpy.std(A))
+#it doesn't give the right value for std and I can't figure out why.
 
 
 
