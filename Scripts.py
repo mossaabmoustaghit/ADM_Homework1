@@ -1133,9 +1133,47 @@ print(numpy.std(A))
 #it doesn't give the right value for std and I can't figure out why.
 
 
+#----------------------------------Problem 2-----------------------------------------------
+# Birthday Cake Candles
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'birthdayCakeCandles' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts INTEGER_ARRAY candles as parameter.
+#
+
+def birthdayCakeCandles(candles):
+    # Write your code here
+    n=len(candles)
+    counter=0
+    mheight=max(candles)
+    for i in range (n):
+        if candles[i]==mheight:
+            counter+=1
+    return counter        
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    candles_count = int(input().strip())
+
+    candles = list(map(int, input().rstrip().split()))
+
+    result = birthdayCakeCandles(candles)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
 
 
 
+# Number Line Jumps (kangaroo)
 
 
 
