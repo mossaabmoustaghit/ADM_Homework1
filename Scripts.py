@@ -1310,8 +1310,77 @@ if __name__ == '__main__':
     fptr.close()
 
 
+# Insertion Sort 1
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'insertionSort1' function below.
+#
+# The function accepts following parameters:
+#  1. INTEGER n
+#  2. INTEGER_ARRAY arr
+#
+
+def insertionSort1(n, arr):
+    # Write your code here
+    e=arr[n-1]
+    for i in range(n-2,-1,-1):
+        if arr[i]>e:
+            arr[i+1]=arr[i]
+            print(" ".join(map(str, arr)))
+        else:
+            arr[i+1]=e
+            print(" ".join(map(str, arr)))
+            break
+    if arr[0]>e:
+        arr[0]=e
+        print(" ".join(map(str, arr)))
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    insertionSort1(n, arr)
 
 
+# Insertion Sort 1
+import math
+import os
+import random
+import re
+import sys
 
+#
+# Complete the 'insertionSort2' function below.
+#
+# The function accepts following parameters:
+#  1. INTEGER n
+#  2. INTEGER_ARRAY arr
+#
+
+def insertionSort2(n, arr):
+    # Write your code here
+    for i in range (1,n):
+        e=arr[i]
+        for i in range(i-1,-1,-1):
+            if arr[i]>e:
+                arr[i+1]=arr[i]
+            else:
+                arr[i+1]=e
+                break
+        if arr[0]>e:
+            arr[0]=e
+        print(" ".join(map(str, arr)))
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    insertionSort2(n, arr)
 
 
