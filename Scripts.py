@@ -1227,7 +1227,87 @@ if __name__ == '__main__':
     
     
 
+# Viral Advertising 
+import math
+import os
+import random
+import re
+import sys
 
+#
+# Complete the 'viralAdvertising' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts INTEGER n as parameter.
+#
+
+def viralAdvertising(n):
+    # Write your code here
+    people=5
+    totallikes=0
+    peoplelike=0
+    for i in range(n):
+        peoplelike=math.floor(people/2)
+        totallikes+=peoplelike
+        people=peoplelike*3
+    return totallikes
+        
+    
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    result = viralAdvertising(n)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+
+    
+    
+# Recursive Digit Sum
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'superDigit' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts following parameters:
+#  1. STRING n
+#  2. INTEGER k
+#
+
+def superDigit(n, k):
+    # Write your code here
+    number=map(int,list(n))
+    number=sum(number)*k
+    numberstring=str(number)
+    if len(numberstring)==1:
+        return number
+    else:
+        return superDigit(numberstring,1 )
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    first_multiple_input = input().rstrip().split()
+
+    n = first_multiple_input[0]
+
+    k = int(first_multiple_input[1])
+
+    result = superDigit(n, k)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
 
 
 
